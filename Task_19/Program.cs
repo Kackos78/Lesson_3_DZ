@@ -15,7 +15,7 @@ bool CheckPalindrome (int numberInt)
     {
         return false;
     }
-    }
+}
 
 System.Console.WriteLine("Введите пятизначное число для проверки его на полиндром: ");
 int numberInt = Convert.ToInt32(Console.ReadLine());
