@@ -24,9 +24,9 @@
 double distanse3D(double xA, double yA, double zA,
                   double xB, double yB, double zB)
 {
-    double Distanse3D = Math.Sqrt(Math.Pow((xA - xB), 2)
+    double Distanse = Math.Sqrt(Math.Pow((xA - xB), 2)
      + Math.Pow((yA - yB), 2) + Math.Pow((zA - zB ), 2));
-    return Math.Round((Distanse3D)2);
+    return Math.Round(Distanse, 2);
 }
 
 System.Console.WriteLine("Введите координату xA:");
