@@ -5,14 +5,25 @@
 // 12821 -> да
 // 23432 -> да
 
-// if( numberInt / 10000 == numberInt % 10 && (numberInt / 1000) - (numberInt / 10000) == (numberInt % 100) % 10 )
-
-bool CheckPalindrome (string numberStr)
+bool CheckPalindrome (int numberInt)
 {
-    
-}
-
+    if( numberInt / 10000 == numberInt % 10 && numberInt / 1000 - ((numberInt / 10000)*10) == (numberInt % 100) / 10 )
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
 
 System.Console.WriteLine("Введите пятизначное число для проверки его на полиндром: ");
+int numberInt = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine(CheckPalindrome(Console.ReadLine()));
+while (numberInt < 10000 || numberInt > 100000)
+{
+    System.Console.WriteLine("Ошибка ввода данных. Введите пятизначное число для проверки его на полиндром: ");
+    numberInt = Convert.ToInt32(Console.ReadLine());
+}
+
+System.Console.WriteLine(CheckPalindrome(numberInt));
